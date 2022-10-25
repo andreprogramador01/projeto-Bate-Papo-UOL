@@ -1,0 +1,91 @@
+*{
+    box-sizing:border-box;
+}
+b,strong{
+    font-weight:700;
+}
+body{
+    width:375px;
+    background-color: #E5E5E5;
+    font-family: 'Roboto',sans-serif;
+}
+header{
+    background-color: #FFFFFF;
+    display:flex;
+    justify-content: space-between;
+    height:80px;
+    padding:16px 22px 11px 22px;
+}
+header ion-icon{
+    font-size:44px;
+}
+.chat{
+    margin-top:26px;
+}
+
+.entra-sai,.normais, .reservadamente{
+    display: flex;
+    align-items:center;
+    padding: 15px 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.entra-sai{
+    background-color: #DCDCDC;
+}
+.normais{
+   
+    background-color: #FFFFFF;
+    
+}
+.reservadamente{
+    
+    background-color: #FFDEDE;
+    
+}
+.tempo{
+    color: #AAAAAA;
+    padding-right:10px;
+}
+
+.input-mensagem{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 375px;
+    height: 80px;
+    display: flex;
+    justify-content:space-between;
+    background-color: white;
+    align-items: center;
+
+}
+.input-mensagem input{
+    width: 145px;
+    height: 30px;
+    width: 100%;
+    outline:none;
+    border:none;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    padding-left:17px;
+    
+}
+.input-mensagem button{
+    border: none;
+    background-color: white;
+    font-size:30px;
+    padding:27px;
+    height: 80px;
+    cursor: pointer;
+}
+::placeholder{
+    color: #000000;
+    opacity: 1;
+}
