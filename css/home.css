@@ -23,7 +23,7 @@ header ion-icon{
     margin-top:26px;
 }
 
-.entra-sai,.normais, .reservadamente{
+.entra-sai,.pai-normais,.pai-entra-sai,.normais, .reservadamente{
     display: flex;
     align-items:center;
     padding: 15px 8px;
@@ -32,11 +32,12 @@ header ion-icon{
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
+    flex-wrap: wrap;
 }
-.entra-sai{
+.entra-sai, .paientra-sai{
     background-color: #DCDCDC;
 }
-.normais{
+.pai-normais, .normais{
    
     background-color: #FFFFFF;
     
@@ -88,4 +89,7 @@ header ion-icon{
 ::placeholder{
     color: #000000;
     opacity: 1;
+}
+.margin{
+    margin-bottom: 80px;
 }
