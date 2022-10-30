@@ -16,7 +16,7 @@ function carregarChat(){
             const tempoAtual = new Date();
 
             mensagem = mensagens[i];
-            tempo = `<div class="tempo">(${tempoAtual.getHours()}:${tempoAtual.getMinutes()}:${tempoAtual.getSeconds()})</div>`
+            tempo = `<div class="tempo">(${tempoTransformado()})</div>`
 
             if(mensagem.text === 'sai da sala...' || mensagem.text === 'entra na sala...' ){
                 divMensagens.innerHTML += `<div class="entra-sai">
@@ -79,4 +79,12 @@ function enviarMensagem(){
         carregarChat();
     })
     .catch(()=>window.location.reload());
+}
+function tempoTransformado(){
+    let current = new Date();
+    return( 
+        ((current.getHours() < 10)?"0":"") + current.getHours() +
+        ":" + ((current.getMinutes() < 10)?"0":"") + current.getMinutes() +
+        ":" + ((current.getSeconds() < 10)?"0":"") + current.getSeconds()
+        );
 }
