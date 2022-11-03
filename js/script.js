@@ -19,18 +19,18 @@ function carregarChat(){
             tempo = `<div class="tempo">(${tempoTransformado()})</div>`
 
             if(mensagem.text === 'sai da sala...' || mensagem.text === 'entra na sala...' ){
-                divMensagens.innerHTML += `<div class="entra-sai">
+                divMensagens.innerHTML += `<div class="entra-sai" data-test="message">
                                             ${tempo}
                                             <div class="acao"> <b>${mensagem.from}</b> ${mensagem.text}</div>  
                                         </div>`;
             }
             else if(mensagem.to === "Todos"){
-                divMensagens.innerHTML += `<div class="normais">
+                divMensagens.innerHTML += `<div class="normais" data-test="message">
                                             ${tempo}
                                             <div class="acao"> <b>${mensagem.from}</b> para <b> ${mensagem.to}</b>: ${mensagem.text}</div>
                                         </div>`;
             }else if(nome === mensagem.to){
-                divMensagens.innerHTML += `<div class="reservadamente">
+                divMensagens.innerHTML += `<div class="reservadamente" data-test="message">
                                                 ${tempo}
                                                 <div class="acao"> <b>${mensagem.from}</b> reservadamente para <b>${mensagem.to}</b>: ${mensagem.text}</div>  
                                             </div>`;
